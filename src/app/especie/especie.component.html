@@ -1,0 +1,12 @@
+<h1>Espécies</h1>
+
+<ul class="especies">
+  <li *ngFor="let especie of especies">
+    <a routerLink="/detalhesespecie/{{especie.id}}">
+      <span>{{especie.id}} {{especie.nome}} {{especie.descricao}}</span>
+    </a>
+  </li>
+</ul>
+<nav>
+    <a routerLink="/cadastrarespecie">Cadastrar</a>
+</nav>

@@ -1,0 +1,17 @@
+<div *ngIf="especie">
+
+    <h2>Cadastrar: {{ especie.nome }}</h2>
+    <div><span>ID: </span>{{especie.id}}</div>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+          <div class="form-group">
+            <label>Nome:
+              <input [(ngModel)]="especie.nome" placeholder="Nome" name="nome" id="nome"/>
+            </label>
+            <label>Descrição:
+                <input [(ngModel)]="especie.descricao" placeholder="Descrição" name="descricao" id="descricao"/>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-success" >Cadastrar</button>
+          <button type="button" class="btn btn-success" (click)="goBack()">Voltar</button>
+    </form>
+  </div>

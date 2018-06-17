@@ -1,0 +1,19 @@
+<div *ngIf="especie">
+
+    <h2>Detalhes {{ especie.nome }}</h2>
+    <div><span>ID: </span>{{especie.id}}</div>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+          <div class="form-group">
+            <label>Nome:
+              <input [(ngModel)]="especie.nome" placeholder="Nome" name="nome" id="nome"/>
+            </label>
+            <label>Descrição:
+                <input [(ngModel)]="especie.descricao" placeholder="Descrição" name="descrição" id="descrição"/>
+              </label>
+          </div>
+          <button type="submit" class="btn btn-success" >Editar</button>
+          <button type="button" class="btn btn-success" (click)="deleteEspecie()">Deletar</button>
+          <button type="button" class="btn btn-success" (click)="goBack()">Voltar</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,22 @@
+<div *ngIf="animal">
+
+    <h2>Cadastrar: {{ animal.nome }}</h2>
+    <div><span>ID: </span>{{animal.id}}</div>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+          <div class="form-group">
+            <label>nome:
+              <input [(ngModel)]="animal.nome" placeholder="Nome" name="nome" id="nome"/>
+            </label>
+            <label>nascimento:
+                <input [(ngModel)]="animal.nascimento" placeholder="Nascimento" name="nascimento" id="nascimento"/>
+              </label>
+            <label fo="especie">Especie: </label>
+            <select [(ngModel)]="espe" class="form-control" id="especies" name="especies"  required>
+              <option id="especie" name="especie"  *ngFor="let especie of especies" [ngValue]="especie">{{especie.descricao}}</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-success" >Cadastrar</button>
+          <button type="button" class="btn btn-success" (click)="goBack()">Voltar</button>
+    </form>
+  </div>
+  

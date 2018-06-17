@@ -1,0 +1,12 @@
+<h1>Animais</h1>
+
+<ul class="animais">
+  <li *ngFor="let animal of animais">
+    <a routerLink="/detalhesanimal/{{animal.id}}">
+      <span>{{animal.id}} {{animal.nome}} {{animal.nascimento}}</span>
+    </a>
+  </li>
+</ul>
+<nav>
+    <a routerLink="/cadastraranimal">Cadastrar</a>
+</nav>

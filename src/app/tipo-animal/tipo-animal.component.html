@@ -1,0 +1,12 @@
+<h1>Tipos de Animais</h1>
+
+<ul class="tipoAnimais">
+  <li *ngFor="let tipoAnimal of tipoAnimais">
+    <a routerLink="/detalhestipoanimal/{{tipoAnimal.acronimo}}">
+      <span>{{tipoAnimal.id}} {{tipoAnimal.nome}} {{tipoAnimal.descricao}}</span>
+    </a>
+  </li>
+</ul>
+<nav>
+    <a routerLink="/tipoanimaiscadastrar">Cadastrar</a>
+</nav>
